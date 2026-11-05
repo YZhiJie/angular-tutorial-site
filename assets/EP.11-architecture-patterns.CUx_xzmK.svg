@@ -1,0 +1,225 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 840" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#101a33"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#DD0031"/>
+      <stop offset="1" stop-color="#f472b6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="840" fill="url(#bg)"/>
+  <polygon points="980,0 1060,0 760,840 680,840" fill="#DD0031" opacity="0.04"/>
+  <polygon points="150,0 220,0 1040,840 970,840" fill="#22d3ee" opacity="0.03"/>
+
+  <!-- Header -->
+  <rect x="20" y="14" width="92" height="36" rx="9" fill="#DD0031"/>
+  <text x="66" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff">EP.11</text>
+  <text x="126" y="40" font-size="26" font-weight="bold" fill="url(#titleGrad)">大型应用怎么分层</text>
+  <text x="1180" y="38" text-anchor="end" font-size="13" fill="#64748b">Angular 漫画剧场 · 霓虹墨 NEON INK</text>
+  <rect x="20" y="62" width="1160" height="2" rx="1" fill="url(#titleGrad)" opacity="0.6"/>
+
+  <!-- Panel 1: 左上 · 困境 -->
+  <g transform="translate(20,84)">
+    <rect width="572" height="361" rx="14" fill="#0e1730" stroke="#223055"/>
+    <polygon points="380,0 450,0 120,361 50,361" fill="#22d3ee" opacity="0.04"/>
+    <rect x="14" y="13" width="26" height="20" rx="6" fill="#22d3ee"/>
+    <text x="27" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b1220">1</text>
+    <text x="50" y="29" font-size="17" font-weight="bold" fill="#e2e8f0">困境：组件直接取数</text>
+
+    <!-- 标签君头像 -->
+    <g transform="translate(52,110)">
+      <rect x="-19" y="14" width="38" height="22" rx="9" fill="#3b82f6"/>
+      <path d="M-5,18 L5,18 L3.5,27 L0,29 L-3.5,27 Z" fill="#f97316"/>
+      <circle cx="0" cy="-2" r="16" fill="#ffd9b3"/>
+      <path d="M-16,-2 L-11,-13 L-6,-4 L0,-14 L6,-4 L11,-13 L16,-2 Q0,-11 -16,-2 Z" fill="#f97316"/>
+      <circle cx="-5" cy="0" r="1.7" fill="#0b1220"/>
+      <circle cx="5" cy="0" r="1.7" fill="#0b1220"/>
+      <path d="M-3,5 q3,3 6,0" stroke="#0b1220" stroke-width="1.3" fill="none"/>
+    </g>
+    <polygon points="88,100 74,106 88,112" fill="#f8fafc"/>
+    <rect x="88" y="82" width="410" height="52" rx="10" fill="#f8fafc"/>
+    <text x="102" y="104" font-size="15" fill="#0b1220">30 个模块互相 import 形成循环——</text>
+    <text x="102" y="126" font-size="15" fill="#0b1220">组件里注入 HttpClient，想换缓存只能改组件。</text>
+
+    <!-- Code chip -->
+    <rect x="24" y="152" width="524" height="92" rx="8" fill="#0a0f1c" stroke="#22d3ee" stroke-opacity="0.35"/>
+    <text x="38" y="174" font-size="12.5" fill="#7dd3fc" font-family="'SF Mono',Consolas,monospace">// 反例：展示、校验、请求、状态全压组件</text>
+    <text x="38" y="194" font-size="12.5" fill="#f472b6" font-family="'SF Mono',Consolas,monospace">load(): void {</text>
+    <text x="46" y="212" font-size="12.5" fill="#f472b6" font-family="'SF Mono',Consolas,monospace">  this.http.get('/api/orders')</text>
+    <text x="46" y="230" font-size="12.5" fill="#f472b6" font-family="'SF Mono',Consolas,monospace">    .subscribe(o =&gt; this.orders.set(o));</text>
+    <text x="38" y="250" font-size="12.5" fill="#f472b6" font-family="'SF Mono',Consolas,monospace">}</text>
+
+    <!-- 底部总结 -->
+    <rect x="24" y="264" width="524" height="72" rx="8" fill="#111a30" stroke="#1e2a44"/>
+    <rect x="24" y="264" width="4" height="72" rx="2" fill="#22d3ee"/>
+    <text x="40" y="286" font-size="13.5" fill="#e2e8f0">三个方向上同时变脆：换数据源改组件，</text>
+    <text x="40" y="306" font-size="13.5" fill="#94a3b8">加提示改组件，脱离网络测试改组件。</text>
+    <text x="40" y="326" font-size="13.5" fill="#94a3b8">复制一遍逻辑才能给第二个页面用。</text>
+  </g>
+
+  <!-- Panel 2: 右上 · 揭秘 -->
+  <g transform="translate(608,84)">
+    <rect width="572" height="361" rx="14" fill="#0e1730" stroke="#223055"/>
+    <polygon points="420,0 480,0 150,361 90,361" fill="#a78bfa" opacity="0.04"/>
+    <rect x="14" y="13" width="26" height="20" rx="6" fill="#a78bfa"/>
+    <text x="27" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b1220">2</text>
+    <text x="50" y="29" font-size="17" font-weight="bold" fill="#e2e8f0">揭秘：依赖倒置 + InjectionToken</text>
+
+    <!-- 码叔头像 -->
+    <g transform="translate(52,110)">
+      <rect x="-19" y="14" width="38" height="22" rx="9" fill="#e2e8f0"/>
+      <circle cx="0" cy="-2" r="16" fill="#ffd9b3"/>
+      <path d="M-16,-2 a16,16 0 0 1 32,0 q-3,-12 -16,-12 q-13,0 -16,12 z" fill="#f1f5f9"/>
+      <circle cx="-5" cy="0" r="4" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+      <circle cx="5" cy="0" r="4" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+      <path d="M-1,0 L1,0" stroke="#94a3b8" stroke-width="1.4"/>
+      <circle cx="-5" cy="0" r="1.4" fill="#0b1220"/>
+      <circle cx="5" cy="0" r="1.4" fill="#0b1220"/>
+      <path d="M-6,7 q12,9 0,16 q-4,0 -6,-16 z" fill="#f1f5f9"/>
+    </g>
+    <polygon points="88,99 74,105 88,111" fill="#f8fafc"/>
+    <rect x="88" y="82" width="420" height="52" rx="10" fill="#f8fafc"/>
+    <text x="102" y="104" font-size="15" fill="#0b1220">领域接口 + Token，组合根决定实现；</text>
+    <text x="102" y="126" font-size="15" fill="#0b1220">Facade 收敛状态，组件只读 signal。</text>
+
+    <!-- Code chips -->
+    <rect x="32" y="150" width="508" height="42" rx="8" fill="#111a30" stroke="#22d3ee" stroke-opacity="0.5"/>
+    <text x="46" y="168" font-size="12.5" font-weight="bold" fill="#22d3ee">core</text>
+    <text x="80" y="168" font-size="12" fill="#94a3b8">↓ 只声明接口，不碰 HTTP</text>
+    <text x="46" y="186" font-size="12.5" fill="#f472b6">interface OrderRepository { list(); create(); }</text>
+
+    <rect x="32" y="200" width="508" height="42" rx="8" fill="#111a30" stroke="#a78bfa" stroke-opacity="0.5"/>
+    <text x="46" y="218" font-size="12.5" font-weight="bold" fill="#a78bfa">Token</text>
+    <text x="90" y="218" font-size="12" fill="#94a3b8">↓ 运行时注入键，接口编译后擦除</text>
+    <text x="46" y="236" font-size="12.5" fill="#f472b6">const ORDER_REPO = new InjectionToken('OrderRepo')</text>
+
+    <rect x="32" y="250" width="508" height="42" rx="8" fill="#111a30" stroke="#f472b6" stroke-opacity="0.5"/>
+    <text x="46" y="268" font-size="12.5" font-weight="bold" fill="#f472b6">Facade</text>
+    <text x="94" y="268" font-size="12" fill="#94a3b8">↓ 私有可写 signal + 公开只读视图</text>
+    <text x="46" y="286" font-size="12.5" fill="#f472b6">private state = signal([]); readonly orders = state.asReadonly()</text>
+
+    <rect x="24" y="298" width="524" height="44" rx="8" fill="#111a30" stroke="#1e2a44"/>
+    <rect x="24" y="298" width="4" height="44" rx="2" fill="#a78bfa"/>
+    <text x="40" y="318" font-size="13.5" fill="#e2e8f0">依赖方向只允许从外向内：feature → core。</text>
+    <text x="40" y="334" font-size="13.5" fill="#94a3b8">app.config.ts 是唯一装配点。</text>
+  </g>
+
+  <!-- Panel 3: 左下 · 实证 -->
+  <g transform="translate(20,462)">
+    <rect width="572" height="361" rx="14" fill="#0e1730" stroke="#223055"/>
+    <polygon points="380,0 450,0 120,361 50,361" fill="#f472b6" opacity="0.04"/>
+    <rect x="14" y="13" width="26" height="20" rx="6" fill="#f472b6"/>
+    <text x="27" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b1220">3</text>
+    <text x="50" y="29" font-size="17" font-weight="bold" fill="#e2e8f0">实证：分层依赖图</text>
+
+    <!-- 像素酱头像 -->
+    <g transform="translate(52,110)">
+      <rect x="-19" y="14" width="38" height="22" rx="9" fill="#DD0031"/>
+      <circle cx="0" cy="-2" r="16" fill="#ffd9b3"/>
+      <path d="M-16,-2 a16,16 0 0 1 32,0 q-3,-13 -16,-13 q-13,0 -16,13 z" fill="#22d3ee"/>
+      <circle cx="15" cy="4" r="6.5" fill="#22d3ee"/>
+      <circle cx="-5" cy="0" r="1.7" fill="#0b1220"/>
+      <circle cx="5" cy="0" r="1.7" fill="#0b1220"/>
+      <path d="M-3,5 q3,3 6,0" stroke="#0b1220" stroke-width="1.3" fill="none"/>
+    </g>
+    <polygon points="88,100 74,106 88,112" fill="#f8fafc"/>
+    <rect x="88" y="82" width="400" height="52" rx="10" fill="#f8fafc"/>
+    <text x="102" y="104" font-size="15" fill="#0b1220">箭头只允许向 core 指，不能反过来；</text>
+    <text x="102" y="126" font-size="15" fill="#0b1220">Facade 私有 state 不对外暴露。</text>
+
+    <!-- Architecture diagram -->
+    <rect x="32" y="150" width="508" height="178" rx="8" fill="#111a30" stroke="#223055"/>
+
+    <!-- app.config -->
+    <rect x="44" y="162" width="120" height="26" rx="4" fill="#DD0031" opacity="0.2" stroke="#DD0031" stroke-opacity="0.6"/>
+    <text x="104" y="180" text-anchor="middle" font-size="12" font-weight="bold" fill="#DD0031">app.config.ts</text>
+    <text x="104" y="198" text-anchor="middle" font-size="10" fill="#64748b">组合根 · 唯一装配点</text>
+
+    <!-- features -->
+    <rect x="190" y="162" width="120" height="26" rx="4" fill="#22d3ee" opacity="0.2" stroke="#22d3ee" stroke-opacity="0.6"/>
+    <text x="250" y="180" text-anchor="middle" font-size="12" font-weight="bold" fill="#22d3ee">features/orders</text>
+    <text x="250" y="198" text-anchor="middle" font-size="10" fill="#64748b">Facade · 状态与用例</text>
+
+    <!-- core -->
+    <rect x="336" y="162" width="120" height="26" rx="4" fill="#a78bfa" opacity="0.2" stroke="#a78bfa" stroke-opacity="0.6"/>
+    <text x="396" y="180" text-anchor="middle" font-size="12" font-weight="bold" fill="#a78bfa">core/</text>
+    <text x="396" y="198" text-anchor="middle" font-size="10" fill="#64748b">接口 + 领域模型 + Token</text>
+
+    <!-- Arrow features → core -->
+    <path d="M310,175 L336,175" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowG)"/>
+
+    <!-- Arrow features → app (dashed) -->
+    <path d="M190,195 L164,195" stroke="#34d399" stroke-width="1.2" stroke-dasharray="3,2"/>
+
+    <!-- component box -->
+    <rect x="190" y="216" width="120" height="30" rx="4" fill="#f472b6" opacity="0.2" stroke="#f472b6" stroke-opacity="0.6"/>
+    <text x="250" y="236" text-anchor="middle" font-size="11" fill="#f472b6">OrdersPage 组件</text>
+    <text x="250" y="252" text-anchor="middle" font-size="10" fill="#64748b">只注入 Facade · 只读 signal</text>
+
+    <!-- component → features arrow -->
+    <path d="M250,216 L250,188" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowG)"/>
+
+    <!-- Fake repo box for testing -->
+    <rect x="336" y="216" width="120" height="30" rx="4" fill="#34d399" opacity="0.2" stroke="#34d399" stroke-opacity="0.6"/>
+    <text x="396" y="236" text-anchor="middle" font-size="11" fill="#34d399">FakeOrderRepository</text>
+    <text x="396" y="252" text-anchor="middle" font-size="10" fill="#64748b">测试里 useValue 替换</text>
+
+    <!-- Fake → core arrow -->
+    <path d="M336,231 L310,231" stroke="#34d399" stroke-width="1.2" stroke-dasharray="3,2"/>
+
+    <!-- Legend -->
+    <rect x="44" y="270" width="500" height="46" rx="4" fill="#0b1220" opacity="0.5"/>
+    <circle cx="58" cy="288" r="3" fill="#34d399"/>
+    <text x="70" y="292" font-size="10.5" fill="#94a3b8">实线 = 允许的依赖方向</text>
+    <circle cx="220" cy="288" r="3" fill="#34d399" stroke-dasharray="2,1"/>
+    <text x="232" y="292" font-size="10.5" fill="#94a3b8">虚线 = 装配时的实现绑定</text>
+    <circle cx="410" cy="288" r="3" fill="#DD0031"/>
+    <text x="422" y="292" font-size="10.5" fill="#94a3b8">core 不能 import features</text>
+  </g>
+
+  <!-- Panel 4: 右下 · 结案 -->
+  <g transform="translate(608,462)">
+    <rect width="572" height="361" rx="14" fill="#0e1730" stroke="#223055"/>
+    <polygon points="420,0 480,0 150,361 90,361" fill="#f97316" opacity="0.04"/>
+    <rect x="14" y="13" width="26" height="20" rx="6" fill="#f97316"/>
+    <text x="27" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b1220">4</text>
+    <text x="50" y="29" font-size="17" font-weight="bold" fill="#e2e8f0">结案：架构分层最佳实践</text>
+
+    <!-- 码叔头像 -->
+    <g transform="translate(52,110)">
+      <rect x="-19" y="14" width="38" height="22" rx="9" fill="#e2e8f0"/>
+      <circle cx="0" cy="-2" r="16" fill="#ffd9b3"/>
+      <path d="M-16,-2 a16,16 0 0 1 32,0 q-3,-12 -16,-12 q-13,0 -16,12 z" fill="#f1f5f9"/>
+      <circle cx="-5" cy="0" r="4" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+      <circle cx="5" cy="0" r="4" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+      <path d="M-1,0 L1,0" stroke="#94a3b8" stroke-width="1.4"/>
+      <circle cx="-5" cy="0" r="1.4" fill="#0b1220"/>
+      <circle cx="5" cy="0" r="1.4" fill="#0b1220"/>
+      <path d="M-6,7 q12,9 0,16 q-4,0 -6,-16 z" fill="#f1f5f9"/>
+    </g>
+    <polygon points="88,100 74,106 88,112" fill="#f8fafc"/>
+    <rect x="88" y="82" width="420" height="52" rx="10" fill="#f8fafc"/>
+    <text x="102" y="104" font-size="15" fill="#0b1220">分层不是拆文件多，而是</text>
+    <text x="102" y="126" font-size="15" fill="#0b1220">让变化被隔离在一层里。</text>
+
+    <!-- 坑点标签 -->
+    <rect x="24" y="154" width="96" height="26" rx="13" fill="#f97316"/>
+    <text x="72" y="172" text-anchor="middle" font-size="13" font-weight="bold" fill="#0b1220">⚠ 坑点</text>
+    <rect x="32" y="200" width="9" height="9" rx="2" fill="#f97316"/>
+    <text x="52" y="209" font-size="14" fill="#e2e8f0">组件绕过 Token 直接注入具体类，耦合展示与实现</text>
+    <rect x="32" y="228" width="9" height="9" rx="2" fill="#f97316"/>
+    <text x="52" y="237" font-size="14" fill="#e2e8f0">Facade 暴露可写 signal，组件能绕过校验直接 set</text>
+    <rect x="32" y="256" width="9" height="9" rx="2" fill="#f97316"/>
+    <text x="52" y="265" font-size="14" fill="#e2e8f0">InMemoryRepository 加 providedIn: 'root' 产生多余单例</text>
+
+    <!-- 码叔总结 -->
+    <rect x="24" y="290" width="524" height="50" rx="8" fill="#111a30" stroke="#1e2a44"/>
+    <rect x="24" y="290" width="4" height="50" rx="2" fill="#DD0031"/>
+    <text x="40" y="311" font-size="13.5" font-weight="bold" fill="#DD0031">码叔总结</text>
+    <text x="40" y="331" font-size="13.5" fill="#e2e8f0">依赖倒置、Token 绑定、Facade 收敛、组合根唯一。</text>
+  </g>
+
+  <text x="1180" y="832" text-anchor="end" font-size="11" fill="#475569">NEON INK · angular-tutorial · EP.11</text>
+</svg>

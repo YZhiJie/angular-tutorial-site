@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 840" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#101a33"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#DD0031"/>
+      <stop offset="1" stop-color="#f472b6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="840" fill="url(#bg)"/>
+  <polygon points="980,0 1060,0 760,840 680,840" fill="#DD0031" opacity="0.04"/>
+  <polygon points="150,0 220,0 1040,840 970,840" fill="#22d3ee" opacity="0.03"/>
+
+  <!-- Header -->
+  <rect x="20" y="14" width="92" height="36" rx="9" fill="#DD0031"/>
+  <text x="66" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff">EP.13</text>
+  <text x="126" y="40" font-size="26" font-weight="bold" fill="url(#titleGrad)">导航链上的三道门</text>
+  <text x="1180" y="38" text-anchor="end" font-size="13" fill="#64748b">Angular 漫画剧场 · 霓虹墨 NEON INK</text>
+  <rect x="20" y="62" width="1160" height="2" rx="1" fill="url(#titleGrad)" opacity="0.6"/>
+
+  <!-- Panel 1: 左上 · 困境 -->
+  <g transform="translate(20,84)">
+    <rect width="572" height="361" rx="14" fill="#0e1730" stroke="#223055"/>
+    <polygon points="380,0 450,0 120,361 50,361" fill="#22d3ee" opacity="0.04"/>
+    <rect x="14" y="13" width="26" height="20" rx="6" fill="#22d3ee"/>
+    <text x="27" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b1220">1</text>
+    <text x="50" y="29" font-size="17" font-weight="bold" fill="#e2e8f0">困境：先建组件再查权限</text>
+
+    <!-- 像素酱头像 -->
+    <g transform="translate(52,110)">
+      <rect x="-19" y="14" width="38" height="22" rx="9" fill="#DD0031"/>
+      <circle cx="0" cy="-2" r="16" fill="#ffd9b3"/>
+      <path d="M-16,-2 a16,16 0 0 1 32,0 q-3,-13 -16,-13 q-13,0 -16,13 z" fill="#22d3ee"/>
+      <circle cx="15" cy="4" r="6.5" fill="#22d3ee"/>
+      <circle cx="-5" cy="0" r="1.7" fill="#0b1220"/>
+      <circle cx="5" cy="0" r="1.7" fill="#0b1220"/>
+      <path d="M-3,5 q3,3 6,0" stroke="#0b1220" stroke-width="1.3" fill="none"/>
+    </g>
+    <polygon points="88,100 74,106 88,112" fill="#f8fafc"/>
+    <rect x="88" y="82" width="410" height="52" rx="10" fill="#f8fafc"/>
+    <text x="102" y="104" font-size="15" fill="#0b1220">直接访问 /admin，组件都创建完了，</text>
+    <text x="102" y="126" font-size="15" fill="#0b1220">才开始查权限——chunk 也早下载了。</text>
+
+    <!-- Code chip -->
+    <rect x="24" y="152" width="524" height="92" rx="8" fill="#0a0f1c" stroke="#22d3ee" stroke-opacity="0.35"/>
+    <text x="38" y="174" font-size="12.5" fill="#7dd3fc" font-family="'SF Mono',Consolas,monospace">// 错位：权限检查写进了组件</text>
+    <text x="38" y="194" font-size="12.5" fill="#f472b6" font-family="'SF Mono',Consolas,monospace">ngOnInit() {</text>
+    <text x="38" y="214" font-size="12.5" fill="#f472b6" font-family="'SF Mono',Consolas,monospace">  if (auth.role !== 'admin') router.navigate(['/']);</text>
+    <text x="38" y="234" font-size="12.5" fill="#22d3ee" font-family="'SF Mono',Consolas,monospace">}</text>
+
+    <!-- 底部总结 -->
+    <rect x="24" y="264" width="524" height="72" rx="8" fill="#111a30" stroke="#1e2a44"/>
+    <rect x="24" y="264" width="4" height="72" rx="2" fill="#22d3ee"/>
+    <text x="40" y="286" font-size="13.5" fill="#e2e8f0">守卫放进组件，等于先开门再查证件：</text>
+    <text x="40" y="306" font-size="13.5" fill="#94a3b8">组件与 chunk 的成本已经付出，</text>
+    <text x="40" y="326" font-size="13.5" fill="#94a3b8">重定向还多留下一次无谓导航。</text>
+  </g>
+
+  <!-- Panel 2: 右上 · 揭秘 -->
+  <g transform="translate(608,84)">
+    <rect width="572" height="361" rx="14" fill="#0e1730" stroke="#223055"/>
+    <polygon points="420,0 480,0 150,361 90,361" fill="#a78bfa" opacity="0.04"/>
+    <rect x="14" y="13" width="26" height="20" rx="6" fill="#a78bfa"/>
+    <text x="27" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b1220">2</text>
+    <text x="50" y="29" font-size="17" font-weight="bold" fill="#e2e8f0">揭秘：一次导航的五关</text>
+
+    <!-- 码叔头像 -->
+    <g transform="translate(52,110)">
+      <rect x="-19" y="14" width="38" height="22" rx="9" fill="#e2e8f0"/>
+      <circle cx="0" cy="-2" r="16" fill="#ffd9b3"/>
+      <path d="M-16,-2 a16,16 0 0 1 32,0 q-3,-12 -16,-12 q-13,0 -16,12 z" fill="#f1f5f9"/>
+      <circle cx="-5" cy="0" r="4" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+      <circle cx="5" cy="0" r="4" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+      <path d="M-1,0 L1,0" stroke="#94a3b8" stroke-width="1.4"/>
+      <circle cx="-5" cy="0" r="1.4" fill="#0b1220"/>
+      <circle cx="5" cy="0" r="1.4" fill="#0b1220"/>
+      <path d="M-6,7 q12,9 0,16 q-4,0 -6,-16 z" fill="#f1f5f9"/>
+    </g>
+    <polygon points="88,99 74,105 88,111" fill="#f8fafc"/>
+    <rect x="88" y="82" width="420" height="52" rx="10" fill="#f8fafc"/>
+    <text x="102" y="104" font-size="15" fill="#0b1220">一次导航按顺序过五关：</text>
+    <text x="102" y="126" font-size="15" fill="#0b1220">匹配、激活、解析、创建、离开。</text>
+
+    <!-- Five stages -->
+    <rect x="32" y="148" width="508" height="34" rx="8" fill="#111a30" stroke="#22d3ee" stroke-opacity="0.5"/>
+    <text x="46" y="170" font-size="13" fill="#22d3ee">① canMatch　结构匹配，不匹配就跳过该路由</text>
+
+    <rect x="32" y="190" width="508" height="34" rx="8" fill="#111a30" stroke="#a78bfa" stroke-opacity="0.5"/>
+    <text x="46" y="212" font-size="13" fill="#a78bfa">② canActivate　允许激活，false / UrlTree</text>
+
+    <rect x="32" y="232" width="508" height="34" rx="8" fill="#111a30" stroke="#f472b6" stroke-opacity="0.5"/>
+    <text x="46" y="254" font-size="13" fill="#f472b6">③ ResolveFn　激活前把数据准备好</text>
+
+    <rect x="32" y="274" width="508" height="34" rx="8" fill="#111a30" stroke="#f97316" stroke-opacity="0.5"/>
+    <text x="46" y="296" font-size="13" fill="#f97316">④ 创建组件　绑定输入、渲染视图</text>
+
+    <rect x="32" y="316" width="508" height="30" rx="8" fill="#111a30" stroke="#34d399" stroke-opacity="0.5"/>
+    <text x="46" y="336" font-size="13" fill="#34d399">⑤ canDeactivate　离开前确认</text>
+  </g>
+
+  <!-- Panel 3: 左下 · 实证 -->
+  <g transform="translate(20,462)">
+    <rect width="572" height="361" rx="14" fill="#0e1730" stroke="#223055"/>
+    <polygon points="380,0 450,0 120,361 50,361" fill="#f472b6" opacity="0.04"/>
+    <rect x="14" y="13" width="26" height="20" rx="6" fill="#f472b6"/>
+    <text x="27" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b1220">3</text>
+    <text x="50" y="29" font-size="17" font-weight="bold" fill="#e2e8f0">实证：同一角色三种结果</text>
+
+    <!-- 标签君头像 -->
+    <g transform="translate(52,110)">
+      <rect x="-19" y="14" width="38" height="22" rx="9" fill="#3b82f6"/>
+      <path d="M-5,18 L5,18 L3.5,27 L0,29 L-3.5,27 Z" fill="#f97316"/>
+      <circle cx="0" cy="-2" r="16" fill="#ffd9b3"/>
+      <path d="M-16,-2 L-11,-13 L-6,-4 L0,-14 L6,-4 L11,-13 L16,-2 Q0,-11 -16,-2 Z" fill="#f97316"/>
+      <circle cx="-5" cy="0" r="1.7" fill="#0b1220"/>
+      <circle cx="5" cy="0" r="1.7" fill="#0b1220"/>
+      <path d="M-3,5 q3,3 6,0" stroke="#0b1220" stroke-width="1.3" fill="none"/>
+    </g>
+    <polygon points="88,100 74,106 88,112" fill="#f8fafc"/>
+    <rect x="88" y="82" width="420" height="52" rx="10" fill="#f8fafc"/>
+    <text x="102" y="104" font-size="15" fill="#0b1220">角色都是 guest，换守卫类型，</text>
+    <text x="102" y="126" font-size="15" fill="#0b1220">代价和结果完全不同。</text>
+
+    <!-- Compare -->
+    <rect x="32" y="150" width="240" height="178" rx="8" fill="#111a30" stroke="#22d3ee" stroke-opacity="0.6"/>
+    <text x="152" y="168" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#22d3ee">canMatch</text>
+    <line x1="44" y1="178" x2="260" y2="178" stroke="#22d3ee" stroke-opacity="0.2"/>
+    <text x="46" y="198" font-size="12" fill="#94a3b8">role = guest</text>
+    <text x="46" y="216" font-size="11" fill="#34d399">✅ 路由不匹配 → 跳过</text>
+    <text x="46" y="240" font-size="12" fill="#94a3b8">/admin chunk</text>
+    <text x="46" y="258" font-size="11" fill="#34d399">✅ 完全不下载</text>
+    <text x="46" y="282" font-size="12" fill="#94a3b8">结果</text>
+    <text x="46" y="300" font-size="11" fill="#34d399">落到后面的兜底页</text>
+
+    <rect x="300" y="150" width="240" height="178" rx="8" fill="#111a30" stroke="#f472b6" stroke-opacity="0.6"/>
+    <text x="420" y="168" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#f472b6">canActivate</text>
+    <line x1="312" y1="178" x2="528" y2="178" stroke="#f472b6" stroke-opacity="0.2"/>
+    <text x="314" y="198" font-size="12" fill="#94a3b8">role = guest</text>
+    <text x="314" y="216" font-size="11" fill="#DD0031">❌ chunk 已经下载</text>
+    <text x="314" y="240" font-size="12" fill="#94a3b8">守卫返回 UrlTree</text>
+    <text x="314" y="258" font-size="11" fill="#34d399">✅ 跳转 /login</text>
+    <text x="314" y="282" font-size="12" fill="#94a3b8">数据显示</text>
+    <text x="314" y="300" font-size="11" fill="#34d399">Resolver 提前备好</text>
+  </g>
+
+  <!-- Panel 4: 右下 · 结案 -->
+  <g transform="translate(608,462)">
+    <rect width="572" height="361" rx="14" fill="#0e1730" stroke="#223055"/>
+    <polygon points="420,0 480,0 150,361 90,361" fill="#f97316" opacity="0.04"/>
+    <rect x="14" y="13" width="26" height="20" rx="6" fill="#f97316"/>
+    <text x="27" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b1220">4</text>
+    <text x="50" y="29" font-size="17" font-weight="bold" fill="#e2e8f0">结案：把校验放对阶段</text>
+
+    <!-- 码叔头像 -->
+    <g transform="translate(52,110)">
+      <rect x="-19" y="14" width="38" height="22" rx="9" fill="#e2e8f0"/>
+      <circle cx="0" cy="-2" r="16" fill="#ffd9b3"/>
+      <path d="M-16,-2 a16,16 0 0 1 32,0 q-3,-12 -16,-12 q-13,0 -16,12 z" fill="#f1f5f9"/>
+      <circle cx="-5" cy="0" r="4" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+      <circle cx="5" cy="0" r="4" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+      <path d="M-1,0 L1,0" stroke="#94a3b8" stroke-width="1.4"/>
+      <circle cx="-5" cy="0" r="1.4" fill="#0b1220"/>
+      <circle cx="5" cy="0" r="1.4" fill="#0b1220"/>
+      <path d="M-6,7 q12,9 0,16 q-4,0 -6,-16 z" fill="#f1f5f9"/>
+    </g>
+    <polygon points="88,100 74,106 88,112" fill="#f8fafc"/>
+    <rect x="88" y="82" width="420" height="52" rx="10" fill="#f8fafc"/>
+    <text x="102" y="104" font-size="15" fill="#0b1220">匹配管存在、激活管进门、</text>
+    <text x="102" y="126" font-size="15" fill="#0b1220">Resolver 管备料，各司其职。</text>
+
+    <!-- 坑点标签 -->
+    <rect x="24" y="154" width="96" height="26" rx="13" fill="#f97316"/>
+    <text x="72" y="172" text-anchor="middle" font-size="13" font-weight="bold" fill="#0b1220">⚠ 坑点</text>
+    <rect x="32" y="200" width="9" height="9" rx="2" fill="#f97316"/>
+    <text x="52" y="209" font-size="14" fill="#e2e8f0">用 canActivate 管路由是否存在 → chunk 照下</text>
+    <rect x="32" y="228" width="9" height="9" rx="2" fill="#f97316"/>
+    <text x="52" y="237" font-size="14" fill="#e2e8f0">守卫返回 false 却期待跳转 → 页面停在原地</text>
+    <rect x="32" y="256" width="9" height="9" rx="2" fill="#f97316"/>
+    <text x="52" y="265" font-size="14" fill="#e2e8f0">Resolver 塞轮询/交互数据 → 首屏被拖慢</text>
+
+    <!-- 码叔总结 -->
+    <rect x="24" y="290" width="524" height="50" rx="8" fill="#111a30" stroke="#1e2a44"/>
+    <rect x="24" y="290" width="4" height="50" rx="2" fill="#DD0031"/>
+    <text x="40" y="311" font-size="13.5" font-weight="bold" fill="#DD0031">码叔总结</text>
+    <text x="40" y="331" font-size="13.5" fill="#e2e8f0">越早拦截，代价越小；UrlTree 比 false 更完整。</text>
+  </g>
+
+  <text x="1180" y="832" text-anchor="end" font-size="11" fill="#475569">NEON INK · angular-tutorial · EP.13</text>
+</svg>

@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 840" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#101a33"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#DD0031"/>
+      <stop offset="1" stop-color="#f472b6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="840" fill="url(#bg)"/>
+  <polygon points="980,0 1060,0 760,840 680,840" fill="#DD0031" opacity="0.04"/>
+  <polygon points="150,0 220,0 1040,840 970,840" fill="#22d3ee" opacity="0.03"/>
+
+  <!-- Header -->
+  <rect x="20" y="14" width="92" height="36" rx="9" fill="#DD0031"/>
+  <text x="66" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff">EP.18</text>
+  <text x="126" y="40" font-size="26" font-weight="bold" fill="url(#titleGrad)">迁移不重写</text>
+  <text x="1180" y="38" text-anchor="end" font-size="13" fill="#64748b">Angular 漫画剧场 · 霓虹墨 NEON INK</text>
+  <rect x="20" y="62" width="1160" height="2" rx="1" fill="url(#titleGrad)" opacity="0.6"/>
+
+  <!-- Panel 1: 左上 · 困境 -->
+  <g transform="translate(20,84)">
+    <rect width="572" height="361" rx="14" fill="#0e1730" stroke="#223055"/>
+    <polygon points="380,0 450,0 120,361 50,361" fill="#22d3ee" opacity="0.04"/>
+    <rect x="14" y="13" width="26" height="20" rx="6" fill="#22d3ee"/>
+    <text x="27" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b1220">1</text>
+    <text x="50" y="29" font-size="17" font-weight="bold" fill="#e2e8f0">困境：一次性重写的诱惑</text>
+
+    <!-- 像素酱头像 -->
+    <g transform="translate(52,110)">
+      <rect x="-19" y="14" width="38" height="22" rx="9" fill="#DD0031"/>
+      <circle cx="0" cy="-2" r="16" fill="#ffd9b3"/>
+      <path d="M-16,-2 a16,16 0 0 1 32,0 q-3,-13 -16,-13 q-13,0 -16,13 z" fill="#22d3ee"/>
+      <circle cx="15" cy="4" r="6.5" fill="#22d3ee"/>
+      <circle cx="-5" cy="0" r="1.7" fill="#0b1220"/>
+      <circle cx="5" cy="0" r="1.7" fill="#0b1220"/>
+      <path d="M-3,5 q3,3 6,0" stroke="#0b1220" stroke-width="1.3" fill="none"/>
+    </g>
+    <polygon points="88,100 74,106 88,112" fill="#f8fafc"/>
+    <rect x="88" y="82" width="440" height="52" rx="10" fill="#f8fafc"/>
+    <text x="102" y="104" font-size="15" fill="#0b1220">老板要三个月迁移完，</text>
+    <text x="102" y="126" font-size="15" fill="#0b1220">方案是「停需求，全部重写」。</text>
+
+    <!-- Code chip -->
+    <rect x="24" y="152" width="524" height="96" rx="8" fill="#0a0f1c" stroke="#DD0031" stroke-opacity="0.45"/>
+    <text x="38" y="174" font-size="12.5" fill="#f472b6" font-family="'SF Mono',Consolas,monospace">// 双真源：两套状态同时存在</text>
+    <text x="38" y="194" font-size="12.5" fill="#7dd3fc" font-family="'SF Mono',Consolas,monospace">count = signal(0);</text>
+    <text x="38" y="214" font-size="12.5" fill="#7dd3fc" font-family="'SF Mono',Consolas,monospace">count$ = new BehaviorSubject(0);</text>
+    <text x="38" y="236" font-size="12.5" fill="#94a3b8" font-family="'SF Mono',Consolas,monospace">// 谁先更新？谁才是真值？</text>
+
+    <!-- 底部总结 -->
+    <rect x="24" y="264" width="524" height="72" rx="8" fill="#111a30" stroke="#1e2a44"/>
+    <rect x="24" y="264" width="4" height="72" rx="2" fill="#DD0031"/>
+    <text x="40" y="286" font-size="13.5" fill="#e2e8f0">一次性重写把风险集中到发布日，</text>
+    <text x="40" y="306" font-size="13.5" fill="#94a3b8">也把「双真源」留给了未来；</text>
+    <text x="40" y="326" font-size="13.5" fill="#94a3b8">迁移真正难的是边界与顺序。</text>
+  </g>
+
+  <!-- Panel 2: 右上 · 揭秘 -->
+  <g transform="translate(608,84)">
+    <rect width="572" height="361" rx="14" fill="#0e1730" stroke="#223055"/>
+    <polygon points="420,0 480,0 150,361 90,361" fill="#a78bfa" opacity="0.04"/>
+    <rect x="14" y="13" width="26" height="20" rx="6" fill="#a78bfa"/>
+    <text x="27" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b1220">2</text>
+    <text x="50" y="29" font-size="17" font-weight="bold" fill="#e2e8f0">揭秘：六阶段路线</text>
+
+    <!-- 码叔头像 -->
+    <g transform="translate(52,110)">
+      <rect x="-19" y="14" width="38" height="22" rx="9" fill="#e2e8f0"/>
+      <circle cx="0" cy="-2" r="16" fill="#ffd9b3"/>
+      <path d="M-16,-2 a16,16 0 0 1 32,0 q-3,-12 -16,-12 q-13,0 -16,12 z" fill="#f1f5f9"/>
+      <circle cx="-5" cy="0" r="4" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+      <circle cx="5" cy="0" r="4" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+      <path d="M-1,0 L1,0" stroke="#94a3b8" stroke-width="1.4"/>
+      <circle cx="-5" cy="0" r="1.4" fill="#0b1220"/>
+      <circle cx="5" cy="0" r="1.4" fill="#0b1220"/>
+      <path d="M-6,7 q12,9 0,16 q-4,0 -6,-16 z" fill="#f1f5f9"/>
+    </g>
+    <polygon points="88,99 74,105 88,111" fill="#f8fafc"/>
+    <rect x="88" y="82" width="420" height="52" rx="10" fill="#f8fafc"/>
+    <text x="102" y="104" font-size="15" fill="#0b1220">迁移不是重写：</text>
+    <text x="102" y="126" font-size="15" fill="#0b1220">先盘点，再按风险排顺序。</text>
+
+    <!-- Six stages -->
+    <rect x="32" y="148" width="508" height="32" rx="7" fill="#111a30" stroke="#22d3ee" stroke-opacity="0.5"/>
+    <text x="46" y="168" font-size="12" fill="#22d3ee">① 盘点依赖与阻塞点（第三方、平台 API）</text>
+    <rect x="32" y="186" width="508" height="32" rx="7" fill="#111a30" stroke="#a78bfa" stroke-opacity="0.5"/>
+    <text x="46" y="206" font-size="12" fill="#a78bfa">② 升级工具链与 Angular 主版本（机械）</text>
+    <rect x="32" y="224" width="508" height="32" rx="7" fill="#111a30" stroke="#f472b6" stroke-opacity="0.5"/>
+    <text x="46" y="244" font-size="12" fill="#f472b6">③ 结构与样式迁移（低风险、可批量）</text>
+    <rect x="32" y="262" width="508" height="32" rx="7" fill="#111a30" stroke="#f97316" stroke-opacity="0.5"/>
+    <text x="46" y="282" font-size="12" fill="#f97316">④ 状态与 DI 边界收紧（中风险）</text>
+    <rect x="32" y="300" width="508" height="32" rx="7" fill="#111a30" stroke="#34d399" stroke-opacity="0.5"/>
+    <text x="46" y="320" font-size="12" fill="#34d399">⑤ 领域逻辑下沉，UI 只保留展示</text>
+    <rect x="32" y="338" width="508" height="26" rx="7" fill="#111a30" stroke="#e2e8f0" stroke-opacity="0.5"/>
+    <text x="46" y="355" font-size="12" fill="#e2e8f0">⑥ 清理过渡代码与双真源（最后一步）</text>
+  </g>
+
+  <!-- Panel 3: 左下 · 实证 -->
+  <g transform="translate(20,462)">
+    <rect width="572" height="361" rx="14" fill="#0e1730" stroke="#223055"/>
+    <polygon points="380,0 450,0 120,361 50,361" fill="#f472b6" opacity="0.04"/>
+    <rect x="14" y="13" width="26" height="20" rx="6" fill="#f472b6"/>
+    <text x="27" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b1220">3</text>
+    <text x="50" y="29" font-size="17" font-weight="bold" fill="#e2e8f0">实证：用边界规则守住方向</text>
+
+    <!-- 标签君头像 -->
+    <g transform="translate(52,110)">
+      <rect x="-19" y="14" width="38" height="22" rx="9" fill="#3b82f6"/>
+      <path d="M-5,18 L5,18 L3.5,27 L0,29 L-3.5,27 Z" fill="#f97316"/>
+      <circle cx="0" cy="-2" r="16" fill="#ffd9b3"/>
+      <path d="M-16,-2 L-11,-13 L-6,-4 L0,-14 L6,-4 L11,-13 L16,-2 Q0,-11 -16,-2 Z" fill="#f97316"/>
+      <circle cx="-5" cy="0" r="1.7" fill="#0b1220"/>
+      <circle cx="5" cy="0" r="1.7" fill="#0b1220"/>
+      <path d="M-3,5 q3,3 6,0" stroke="#0b1220" stroke-width="1.3" fill="none"/>
+    </g>
+    <polygon points="88,100 74,106 88,112" fill="#f8fafc"/>
+    <rect x="88" y="82" width="440" height="52" rx="10" fill="#f8fafc"/>
+    <text x="102" y="104" font-size="15" fill="#0b1220">边界靠 lint，不靠自觉；</text>
+    <text x="102" y="126" font-size="15" fill="#0b1220">依赖方向只能单向。</text>
+
+    <!-- Layers -->
+    <rect x="70" y="154" width="420" height="34" rx="7" fill="#111a30" stroke="#22d3ee" stroke-opacity="0.6"/>
+    <text x="280" y="176" text-anchor="middle" font-size="12.5" fill="#22d3ee">UI / 组件：只依赖 Facade 与展示状态</text>
+    <line x1="280" y1="188" x2="280" y2="198" stroke="#94a3b8" stroke-width="1.2"/>
+    <polygon points="280,204 276,196 284,196" fill="#94a3b8"/>
+
+    <rect x="70" y="198" width="420" height="34" rx="7" fill="#111a30" stroke="#a78bfa" stroke-opacity="0.6"/>
+    <text x="280" y="220" text-anchor="middle" font-size="12.5" fill="#a78bfa">Facade：用例编排、状态转换</text>
+    <line x1="280" y1="232" x2="280" y2="242" stroke="#94a3b8" stroke-width="1.2"/>
+    <polygon points="280,248 276,240 284,240" fill="#94a3b8"/>
+
+    <rect x="70" y="242" width="420" height="34" rx="7" fill="#111a30" stroke="#f472b6" stroke-opacity="0.6"/>
+    <text x="280" y="264" text-anchor="middle" font-size="12.5" fill="#f472b6">Domain：实体、规则、纯函数</text>
+
+    <rect x="24" y="292" width="524" height="56" rx="8" fill="#111a30" stroke="#1e2a44"/>
+    <rect x="24" y="292" width="4" height="56" rx="2" fill="#f472b6"/>
+    <text x="40" y="313" font-size="12.5" fill="#e2e8f0">ESLint boundaries：禁止 Domain 反向 import UI；</text>
+    <text x="40" y="333" font-size="12.5" fill="#94a3b8">公共 API 从 index.ts 导出，内部文件不可直连。</text>
+  </g>
+
+  <!-- Panel 4: 右下 · 结案 -->
+  <g transform="translate(608,462)">
+    <rect width="572" height="361" rx="14" fill="#0e1730" stroke="#223055"/>
+    <polygon points="420,0 480,0 150,361 90,361" fill="#f97316" opacity="0.04"/>
+    <rect x="14" y="13" width="26" height="20" rx="6" fill="#f97316"/>
+    <text x="27" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b1220">4</text>
+    <text x="50" y="29" font-size="17" font-weight="bold" fill="#e2e8f0">结案：把迁移拆成可回滚的小步</text>
+
+    <!-- 码叔头像 -->
+    <g transform="translate(52,110)">
+      <rect x="-19" y="14" width="38" height="22" rx="9" fill="#e2e8f0"/>
+      <circle cx="0" cy="-2" r="16" fill="#ffd9b3"/>
+      <path d="M-16,-2 a16,16 0 0 1 32,0 q-3,-12 -16,-12 q-13,0 -16,12 z" fill="#f1f5f9"/>
+      <circle cx="-5" cy="0" r="4" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+      <circle cx="5" cy="0" r="4" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+      <path d="M-1,0 L1,0" stroke="#94a3b8" stroke-width="1.4"/>
+      <circle cx="-5" cy="0" r="1.4" fill="#0b1220"/>
+      <circle cx="5" cy="0" r="1.4" fill="#0b1220"/>
+      <path d="M-6,7 q12,9 0,16 q-4,0 -6,-16 z" fill="#f1f5f9"/>
+    </g>
+    <polygon points="88,100 74,106 88,112" fill="#f8fafc"/>
+    <rect x="88" y="82" width="420" height="52" rx="10" fill="#f8fafc"/>
+    <text x="102" y="104" font-size="15" fill="#0b1220">每一步都能发布、能回滚，</text>
+    <text x="102" y="126" font-size="15" fill="#0b1220">才算真的在迁移。</text>
+
+    <!-- 坑点标签 -->
+    <rect x="24" y="154" width="96" height="26" rx="13" fill="#f97316"/>
+    <text x="72" y="172" text-anchor="middle" font-size="13" font-weight="bold" fill="#0b1220">⚠ 坑点</text>
+    <rect x="32" y="200" width="9" height="9" rx="2" fill="#f97316"/>
+    <text x="52" y="209" font-size="14" fill="#e2e8f0">一次性重写 → 风险集中到发布日</text>
+    <rect x="32" y="228" width="9" height="9" rx="2" fill="#f97316"/>
+    <text x="52" y="237" font-size="14" fill="#e2e8f0">保留双真源 → signal 与 Subject 长期并存</text>
+    <rect x="32" y="256" width="9" height="9" rx="2" fill="#f97316"/>
+    <text x="52" y="265" font-size="14" fill="#e2e8f0">版本不写进锁文件 → 环境间行为漂移</text>
+
+    <!-- 码叔总结 -->
+    <rect x="24" y="290" width="524" height="50" rx="8" fill="#111a30" stroke="#1e2a44"/>
+    <rect x="24" y="290" width="4" height="50" rx="2" fill="#DD0031"/>
+    <text x="40" y="311" font-size="13.5" font-weight="bold" fill="#DD0031">码叔总结</text>
+    <text x="40" y="331" font-size="13.5" fill="#e2e8f0">先边界、后替换；能回滚的小步，才敢连续发布。</text>
+  </g>
+
+  <text x="1180" y="832" text-anchor="end" font-size="11" fill="#475569">NEON INK · angular-tutorial · EP.18</text>
+</svg>

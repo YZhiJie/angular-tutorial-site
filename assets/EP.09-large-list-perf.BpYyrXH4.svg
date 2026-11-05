@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 840" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#101a33"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#DD0031"/>
+      <stop offset="1" stop-color="#f472b6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="840" fill="url(#bg)"/>
+  <polygon points="980,0 1060,0 760,840 680,840" fill="#DD0031" opacity="0.04"/>
+  <polygon points="150,0 220,0 1040,840 970,840" fill="#22d3ee" opacity="0.03"/>
+
+  <!-- Header -->
+  <rect x="20" y="14" width="92" height="36" rx="9" fill="#DD0031"/>
+  <text x="66" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff">EP.09</text>
+  <text x="126" y="40" font-size="26" font-weight="bold" fill="url(#titleGrad)">百万行也能丝滑</text>
+  <text x="1180" y="38" text-anchor="end" font-size="13" fill="#64748b">Angular 漫画剧场 · 霓虹墨 NEON INK</text>
+  <rect x="20" y="62" width="1160" height="2" rx="1" fill="url(#titleGrad)" opacity="0.6"/>
+
+  <!-- Panel 1: 左上 · 困境 -->
+  <g transform="translate(20,84)">
+    <rect width="572" height="361" rx="14" fill="#0e1730" stroke="#223055"/>
+    <polygon points="380,0 450,0 120,361 50,361" fill="#22d3ee" opacity="0.04"/>
+    <rect x="14" y="13" width="26" height="20" rx="6" fill="#22d3ee"/>
+    <text x="27" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b1220">1</text>
+    <text x="50" y="29" font-size="17" font-weight="bold" fill="#e2e8f0">困境：滚一下卡死</text>
+
+    <!-- 标签君头像 -->
+    <g transform="translate(52,110)">
+      <rect x="-19" y="14" width="38" height="22" rx="9" fill="#3b82f6"/>
+      <path d="M-5,18 L5,18 L3.5,27 L0,29 L-3.5,27 Z" fill="#f97316"/>
+      <circle cx="0" cy="-2" r="16" fill="#ffd9b3"/>
+      <path d="M-16,-2 L-11,-13 L-6,-4 L0,-14 L6,-4 L11,-13 L16,-2 Q0,-11 -16,-2 Z" fill="#f97316"/>
+      <circle cx="-5" cy="0" r="1.7" fill="#0b1220"/>
+      <circle cx="5" cy="0" r="1.7" fill="#0b1220"/>
+      <path d="M-3,5 q3,3 6,0" stroke="#0b1220" stroke-width="1.3" fill="none"/>
+    </g>
+    <polygon points="88,100 74,106 88,112" fill="#f8fafc"/>
+    <rect x="88" y="82" width="400" height="52" rx="10" fill="#f8fafc"/>
+    <text x="102" y="104" font-size="15" fill="#0b1220">10000 行列表，滚一下全页卡 3 秒？</text>
+    <text x="102" y="126" font-size="15" fill="#0b1220">每改一行都触发整棵树检测。</text>
+
+    <!-- Code chip -->
+    <rect x="24" y="152" width="524" height="92" rx="8" fill="#0a0f1c" stroke="#22d3ee" stroke-opacity="0.35"/>
+    <text x="38" y="174" font-size="12.5" fill="#7dd3fc" font-family="'SF Mono',Consolas,monospace">// 反例：模板方法每次求值都重算</text>
+    <text x="38" y="194" font-size="12.5" fill="#f472b6" font-family="'SF Mono',Consolas,monospace">filtered() {</text>
+    <text x="46" y="214" font-size="12.5" fill="#f472b6" font-family="'SF Mono',Consolas,monospace">  return this.rows().filter(r =&gt;</text>
+    <text x="46" y="232" font-size="12.5" fill="#f472b6" font-family="'SF Mono',Consolas,monospace">    r.label.includes(this.keyword()));</text>
+    <text x="38" y="252" font-size="12.5" fill="#f472b6" font-family="'SF Mono',Consolas,monospace">}</text>
+
+    <!-- 底部总结 -->
+    <rect x="24" y="264" width="524" height="72" rx="8" fill="#111a30" stroke="#1e2a44"/>
+    <rect x="24" y="264" width="4" height="72" rx="2" fill="#22d3ee"/>
+    <text x="40" y="286" font-size="13.5" fill="#e2e8f0">卡顿三段：脚本过滤 + 模板求值 + 浏览器渲染</text>
+    <text x="40" y="306" font-size="13.5" fill="#94a3b8">不拆开处理，优化只会撞墙。</text>
+    <text x="40" y="326" font-size="13.5" fill="#94a3b8">Zone.js 猴子补丁让每行都成热点。</text>
+  </g>
+
+  <!-- Panel 2: 右上 · 揭秘 -->
+  <g transform="translate(608,84)">
+    <rect width="572" height="361" rx="14" fill="#0e1730" stroke="#223055"/>
+    <polygon points="420,0 480,0 150,361 90,361" fill="#a78bfa" opacity="0.04"/>
+    <rect x="14" y="13" width="26" height="20" rx="6" fill="#a78bfa"/>
+    <text x="27" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b1220">2</text>
+    <text x="50" y="29" font-size="17" font-weight="bold" fill="#e2e8f0">揭秘：OnPush + track + computed</text>
+
+    <!-- 码叔头像 -->
+    <g transform="translate(52,110)">
+      <rect x="-19" y="14" width="38" height="22" rx="9" fill="#e2e8f0"/>
+      <circle cx="0" cy="-2" r="16" fill="#ffd9b3"/>
+      <path d="M-16,-2 a16,16 0 0 1 32,0 q-3,-12 -16,-12 q-13,0 -16,12 z" fill="#f1f5f9"/>
+      <circle cx="-5" cy="0" r="4" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+      <circle cx="5" cy="0" r="4" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+      <path d="M-1,0 L1,0" stroke="#94a3b8" stroke-width="1.4"/>
+      <circle cx="-5" cy="0" r="1.4" fill="#0b1220"/>
+      <circle cx="5" cy="0" r="1.4" fill="#0b1220"/>
+      <path d="M-6,7 q12,9 0,16 q-4,0 -6,-16 z" fill="#f1f5f9"/>
+    </g>
+    <polygon points="88,99 74,105 88,111" fill="#f8fafc"/>
+    <rect x="88" y="82" width="416" height="52" rx="10" fill="#f8fafc"/>
+    <text x="102" y="104" font-size="15" fill="#0b1220">computed 带缓存；track 给每行稳定身份；</text>
+    <text x="102" y="126" font-size="15" fill="#0b1220">OnPush 让脏组件才被检查。</text>
+
+    <!-- Code chips -->
+    <rect x="32" y="150" width="508" height="42" rx="8" fill="#111a30" stroke="#22d3ee" stroke-opacity="0.5"/>
+    <text x="46" y="168" font-size="12.5" font-weight="bold" fill="#22d3ee">computed</text>
+    <text x="108" y="168" font-size="12" fill="#94a3b8">↓ 惰性执行 + 自动缓存，依赖变化才重算</text>
+    <text x="46" y="186" font-size="12.5" fill="#f472b6">visibleRows = computed(() =&gt; rows().filter(...))</text>
+
+    <rect x="32" y="200" width="508" height="42" rx="8" fill="#111a30" stroke="#a78bfa" stroke-opacity="0.5"/>
+    <text x="46" y="218" font-size="12.5" font-weight="bold" fill="#a78bfa">track</text>
+    <text x="84" y="218" font-size="12" fill="#94a3b8">↓ 给每行建立稳定主键，DOM 可复用</text>
+    <text x="46" y="236" font-size="12.5" fill="#f472b6">@for (row of visibleRows(); track row.id)</text>
+
+    <rect x="32" y="250" width="508" height="42" rx="8" fill="#111a30" stroke="#f472b6" stroke-opacity="0.5"/>
+    <text x="46" y="268" font-size="12.5" font-weight="bold" fill="#f472b6">OnPush</text>
+    <text x="96" y="268" font-size="12" fill="#94a3b8">↓ 只对 signal 通知/事件响应</text>
+    <text x="46" y="286" font-size="12.5" fill="#f472b6">changeDetection: ChangeDetectionStrategy.OnPush</text>
+
+    <rect x="24" y="298" width="524" height="44" rx="8" fill="#111a30" stroke="#1e2a44"/>
+    <rect x="24" y="298" width="4" height="44" rx="2" fill="#a78bfa"/>
+    <text x="40" y="318" font-size="13.5" fill="#e2e8f0">computed 缩小脚本成本，track 缩小 DOM 成本。</text>
+    <text x="40" y="334" font-size="13.5" fill="#94a3b8">OnPush 缩小检查范围，三层各管一段。</text>
+  </g>
+
+  <!-- Panel 3: 左下 · 实证 -->
+  <g transform="translate(20,462)">
+    <rect width="572" height="361" rx="14" fill="#0e1730" stroke="#223055"/>
+    <polygon points="380,0 450,0 120,361 50,361" fill="#f472b6" opacity="0.04"/>
+    <rect x="14" y="13" width="26" height="20" rx="6" fill="#f472b6"/>
+    <text x="27" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b1220">3</text>
+    <text x="50" y="29" font-size="17" font-weight="bold" fill="#e2e8f0">实证：视口只渲染 30 行</text>
+
+    <!-- 像素酱头像 -->
+    <g transform="translate(52,110)">
+      <rect x="-19" y="14" width="38" height="22" rx="9" fill="#DD0031"/>
+      <circle cx="0" cy="-2" r="16" fill="#ffd9b3"/>
+      <path d="M-16,-2 a16,16 0 0 1 32,0 q-3,-13 -16,-13 q-13,0 -16,13 z" fill="#22d3ee"/>
+      <circle cx="15" cy="4" r="6.5" fill="#22d3ee"/>
+      <circle cx="-5" cy="0" r="1.7" fill="#0b1220"/>
+      <circle cx="5" cy="0" r="1.7" fill="#0b1220"/>
+      <path d="M-3,5 q3,3 6,0" stroke="#0b1220" stroke-width="1.3" fill="none"/>
+    </g>
+    <polygon points="88,100 74,106 88,112" fill="#f8fafc"/>
+    <rect x="88" y="82" width="370" height="52" rx="10" fill="#f8fafc"/>
+    <text x="102" y="104" font-size="15" fill="#0b1220">cdk-virtual-scroll-viewport：</text>
+    <text x="102" y="126" font-size="15" fill="#0b1220">10000 行只渲染视口内 ~30 个节点。</text>
+
+    <!-- Virtual scroll visual -->
+    <rect x="32" y="150" width="240" height="178" rx="8" fill="#111a30" stroke="#223055"/>
+    <text x="152" y="168" text-anchor="middle" font-size="12" fill="#94a3b8">全渲染 10000 DOM</text>
+    <g transform="translate(44,178)">
+      <rect x="0" y="0" width="216" height="20" fill="#1e2a44"/>
+      <rect x="0" y="22" width="216" height="20" fill="#223055"/>
+      <rect x="0" y="44" width="216" height="20" fill="#1e2a44"/>
+      <rect x="0" y="66" width="216" height="20" fill="#223055"/>
+      <rect x="0" y="88" width="216" height="20" fill="#1e2a44"/>
+      <rect x="0" y="110" width="216" height="20" fill="#223055"/>
+      <rect x="0" y="132" width="216" height="20" fill="#1e2a44"/>
+      <path d="M0,154 L216,154" stroke="#DD0031" stroke-width="2"/>
+      <text x="108" y="170" text-anchor="middle" font-size="11" fill="#DD0031">卡顿 Long Task ⚠</text>
+    </g>
+
+    <rect x="300" y="150" width="240" height="178" rx="8" fill="#111a30" stroke="#223055"/>
+    <text x="420" y="168" text-anchor="middle" font-size="12" fill="#94a3b8">virtual-scroll ~30 DOM</text>
+    <g transform="translate(312,178)">
+      <rect x="0" y="0" width="216" height="20" fill="#22d3ee" opacity="0.3"/>
+      <rect x="0" y="22" width="216" height="20" fill="#22d3ee" opacity="0.3"/>
+      <rect x="0" y="44" width="216" height="20" fill="#22d3ee" opacity="0.3"/>
+      <rect x="0" y="66" width="216" height="20" fill="#22d3ee" opacity="0.3"/>
+      <path d="M0,90 L216,90" stroke="#34d399" stroke-width="2"/>
+      <text x="108" y="106" text-anchor="middle" font-size="11" fill="#34d399">60 FPS 丝滑 ✅</text>
+    </g>
+  </g>
+
+  <!-- Panel 4: 右下 · 结案 -->
+  <g transform="translate(608,462)">
+    <rect width="572" height="361" rx="14" fill="#0e1730" stroke="#223055"/>
+    <polygon points="420,0 480,0 150,361 90,361" fill="#f97316" opacity="0.04"/>
+    <rect x="14" y="13" width="26" height="20" rx="6" fill="#f97316"/>
+    <text x="27" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b1220">4</text>
+    <text x="50" y="29" font-size="17" font-weight="bold" fill="#e2e8f0">结案：三层优化齐活</text>
+
+    <!-- 码叔头像 -->
+    <g transform="translate(52,110)">
+      <rect x="-19" y="14" width="38" height="22" rx="9" fill="#e2e8f0"/>
+      <circle cx="0" cy="-2" r="16" fill="#ffd9b3"/>
+      <path d="M-16,-2 a16,16 0 0 1 32,0 q-3,-12 -16,-12 q-13,0 -16,12 z" fill="#f1f5f9"/>
+      <circle cx="-5" cy="0" r="4" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+      <circle cx="5" cy="0" r="4" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+      <path d="M-1,0 L1,0" stroke="#94a3b8" stroke-width="1.4"/>
+      <circle cx="-5" cy="0" r="1.4" fill="#0b1220"/>
+      <circle cx="5" cy="0" r="1.4" fill="#0b1220"/>
+      <path d="M-6,7 q12,9 0,16 q-4,0 -6,-16 z" fill="#f1f5f9"/>
+    </g>
+    <polygon points="88,100 74,106 88,112" fill="#f8fafc"/>
+    <rect x="88" y="82" width="400" height="52" rx="10" fill="#f8fafc"/>
+    <text x="102" y="104" font-size="15" fill="#0b1220">拆三段成本、三层工具；</text>
+    <text x="102" y="126" font-size="15" fill="#0b1220">Zone.js 不再是瓶颈。</text>
+
+    <!-- 坑点标签 -->
+    <rect x="24" y="154" width="96" height="26" rx="13" fill="#f97316"/>
+    <text x="72" y="172" text-anchor="middle" font-size="13" font-weight="bold" fill="#0b1220">⚠ 坑点</text>
+    <rect x="32" y="200" width="9" height="9" rx="2" fill="#f97316"/>
+    <text x="52" y="209" font-size="14" fill="#e2e8f0">track $index 导致行身份随位置漂移，输入串位</text>
+    <rect x="32" y="228" width="9" height="9" rx="2" fill="#f97316"/>
+    <text x="52" y="237" font-size="14" fill="#e2e8f0">OnPush 下直接 push 数组不改引用不刷新</text>
+    <rect x="32" y="256" width="9" height="9" rx="2" fill="#f97316"/>
+    <text x="52" y="265" font-size="14" fill="#e2e8f0">content-visibility 缺 contain-intrinsic-size 滚条抖</text>
+
+    <!-- 码叔总结 -->
+    <rect x="24" y="290" width="524" height="50" rx="8" fill="#111a30" stroke="#1e2a44"/>
+    <rect x="24" y="290" width="4" height="50" rx="2" fill="#DD0031"/>
+    <text x="40" y="311" font-size="13.5" font-weight="bold" fill="#DD0031">码叔总结</text>
+    <text x="40" y="331" font-size="13.5" fill="#e2e8f0">computed 懒缓存、track 稳身份、OnPush 窄检查——三件套。</text>
+  </g>
+
+  <text x="1180" y="832" text-anchor="end" font-size="11" fill="#475569">NEON INK · angular-tutorial · EP.09</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Angular 精通之路">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff4d6d" />
+      <stop offset="1" stop-color="#a80028" />
+    </linearGradient>
+  </defs>
+  <path d="M32 3 56 12l-3.6 35L32 60 11.6 47 8 12Z" fill="url(#g)" />
+  <path d="M32 3 56 12l-3.6 35L32 60Z" fill="#000" opacity=".12" />
+  <path d="M32 14 45 44h-6.2l-2.5-7H27.4l-2.5 7H19Zm0 11.5-2.6 7.4h5.2Z" fill="#fff" />
+</svg>

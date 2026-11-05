@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 840" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#101a33"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#DD0031"/>
+      <stop offset="1" stop-color="#f472b6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="840" fill="url(#bg)"/>
+  <polygon points="980,0 1060,0 760,840 680,840" fill="#DD0031" opacity="0.04"/>
+  <polygon points="150,0 220,0 1040,840 970,840" fill="#22d3ee" opacity="0.03"/>
+
+  <!-- Header -->
+  <rect x="20" y="14" width="92" height="36" rx="9" fill="#DD0031"/>
+  <text x="66" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff">EP.15</text>
+  <text x="126" y="40" font-size="26" font-weight="bold" fill="url(#titleGrad)">信任边界</text>
+  <text x="1180" y="38" text-anchor="end" font-size="13" fill="#64748b">Angular 漫画剧场 · 霓虹墨 NEON INK</text>
+  <rect x="20" y="62" width="1160" height="2" rx="1" fill="url(#titleGrad)" opacity="0.6"/>
+
+  <!-- Panel 1: 左上 · 困境 -->
+  <g transform="translate(20,84)">
+    <rect width="572" height="361" rx="14" fill="#0e1730" stroke="#223055"/>
+    <polygon points="380,0 450,0 120,361 50,361" fill="#22d3ee" opacity="0.04"/>
+    <rect x="14" y="13" width="26" height="20" rx="6" fill="#22d3ee"/>
+    <text x="27" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b1220">1</text>
+    <text x="50" y="29" font-size="17" font-weight="bold" fill="#e2e8f0">困境：评论区弹出了 alert</text>
+
+    <!-- 标签君头像 -->
+    <g transform="translate(52,110)">
+      <rect x="-19" y="14" width="38" height="22" rx="9" fill="#3b82f6"/>
+      <path d="M-5,18 L5,18 L3.5,27 L0,29 L-3.5,27 Z" fill="#f97316"/>
+      <circle cx="0" cy="-2" r="16" fill="#ffd9b3"/>
+      <path d="M-16,-2 L-11,-13 L-6,-4 L0,-14 L6,-4 L11,-13 L16,-2 Q0,-11 -16,-2 Z" fill="#f97316"/>
+      <circle cx="-5" cy="0" r="1.7" fill="#0b1220"/>
+      <circle cx="5" cy="0" r="1.7" fill="#0b1220"/>
+      <path d="M-3,5 q3,3 6,0" stroke="#0b1220" stroke-width="1.3" fill="none"/>
+    </g>
+    <polygon points="88,100 74,106 88,112" fill="#f8fafc"/>
+    <rect x="88" y="82" width="430" height="52" rx="10" fill="#f8fafc"/>
+    <text x="102" y="104" font-size="15" fill="#0b1220">用户评论刚提交，页面就弹窗了——</text>
+    <text x="102" y="126" font-size="15" fill="#0b1220">富文本用了 bypassSecurityTrustHtml。</text>
+
+    <!-- Code chip -->
+    <rect x="24" y="152" width="524" height="92" rx="8" fill="#0a0f1c" stroke="#DD0031" stroke-opacity="0.45"/>
+    <text x="38" y="174" font-size="12.5" fill="#f472b6" font-family="'SF Mono',Consolas,monospace">&lt;img src="x" onerror="alert(1)"&gt;</text>
+    <text x="38" y="196" font-size="12.5" fill="#7dd3fc" font-family="'SF Mono',Consolas,monospace">// 直接信任用户输入 = 关闭净化</text>
+    <text x="38" y="218" font-size="12.5" fill="#DD0031" font-family="'SF Mono',Consolas,monospace">bypassSecurityTrustHtml(userComment)</text>
+    <text x="38" y="238" font-size="12.5" fill="#94a3b8" font-family="'SF Mono',Consolas,monospace">// onerror 被原样插入 DOM 并执行</text>
+
+    <!-- 底部总结 -->
+    <rect x="24" y="264" width="524" height="72" rx="8" fill="#111a30" stroke="#1e2a44"/>
+    <rect x="24" y="264" width="4" height="72" rx="2" fill="#DD0031"/>
+    <text x="40" y="286" font-size="13.5" fill="#e2e8f0">前端安全的核心不是过滤坏字符，</text>
+    <text x="40" y="306" font-size="13.5" fill="#94a3b8">而是划清信任边界；</text>
+    <text x="40" y="326" font-size="13.5" fill="#94a3b8">bypass 只是「我保证安全」的声明。</text>
+  </g>
+
+  <!-- Panel 2: 右上 · 揭秘 -->
+  <g transform="translate(608,84)">
+    <rect width="572" height="361" rx="14" fill="#0e1730" stroke="#223055"/>
+    <polygon points="420,0 480,0 150,361 90,361" fill="#a78bfa" opacity="0.04"/>
+    <rect x="14" y="13" width="26" height="20" rx="6" fill="#a78bfa"/>
+    <text x="27" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b1220">2</text>
+    <text x="50" y="29" font-size="17" font-weight="bold" fill="#e2e8f0">揭秘：数据怎么过边界</text>
+
+    <!-- 码叔头像 -->
+    <g transform="translate(52,110)">
+      <rect x="-19" y="14" width="38" height="22" rx="9" fill="#e2e8f0"/>
+      <circle cx="0" cy="-2" r="16" fill="#ffd9b3"/>
+      <path d="M-16,-2 a16,16 0 0 1 32,0 q-3,-12 -16,-12 q-13,0 -16,12 z" fill="#f1f5f9"/>
+      <circle cx="-5" cy="0" r="4" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+      <circle cx="5" cy="0" r="4" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+      <path d="M-1,0 L1,0" stroke="#94a3b8" stroke-width="1.4"/>
+      <circle cx="-5" cy="0" r="1.4" fill="#0b1220"/>
+      <circle cx="5" cy="0" r="1.4" fill="#0b1220"/>
+      <path d="M-6,7 q12,9 0,16 q-4,0 -6,-16 z" fill="#f1f5f9"/>
+    </g>
+    <polygon points="88,99 74,105 88,111" fill="#f8fafc"/>
+    <rect x="88" y="82" width="430" height="52" rx="10" fill="#f8fafc"/>
+    <text x="102" y="104" font-size="15" fill="#0b1220">用户输入、接口、URL 都不可信，</text>
+    <text x="102" y="126" font-size="15" fill="#0b1220">进 DOM 前必须净化或验证。</text>
+
+    <!-- Context table -->
+    <rect x="32" y="148" width="508" height="30" rx="7" fill="#111a30" stroke="#22d3ee" stroke-opacity="0.5"/>
+    <text x="46" y="168" font-size="12.5" fill="#22d3ee">HTML：[innerHTML] → 去掉脚本与事件属性</text>
+    <rect x="32" y="184" width="508" height="30" rx="7" fill="#111a30" stroke="#a78bfa" stroke-opacity="0.5"/>
+    <text x="46" y="204" font-size="12.5" fill="#a78bfa">URL：href/src → javascript: 变成 unsafe:</text>
+    <rect x="32" y="220" width="508" height="30" rx="7" fill="#111a30" stroke="#f472b6" stroke-opacity="0.5"/>
+    <text x="46" y="240" font-size="12.5" fill="#f472b6">STYLE：内联样式 → 去掉危险表达式</text>
+    <rect x="32" y="256" width="508" height="30" rx="7" fill="#111a30" stroke="#f97316" stroke-opacity="0.5"/>
+    <text x="46" y="276" font-size="12.5" fill="#f97316">SCRIPT：脚本内容 → 仅允许可信来源</text>
+
+    <rect x="24" y="298" width="524" height="44" rx="8" fill="#111a30" stroke="#1e2a44"/>
+    <rect x="24" y="298" width="4" height="44" rx="2" fill="#a78bfa"/>
+    <text x="40" y="318" font-size="13.5" fill="#e2e8f0">context 必须与输出位置匹配，</text>
+    <text x="40" y="336" font-size="12.5" fill="#94a3b8">用错 context 等于用错规则。</text>
+  </g>
+
+  <!-- Panel 3: 左下 · 实证 -->
+  <g transform="translate(20,462)">
+    <rect width="572" height="361" rx="14" fill="#0e1730" stroke="#223055"/>
+    <polygon points="380,0 450,0 120,361 50,361" fill="#f472b6" opacity="0.04"/>
+    <rect x="14" y="13" width="26" height="20" rx="6" fill="#f472b6"/>
+    <text x="27" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b1220">3</text>
+    <text x="50" y="29" font-size="17" font-weight="bold" fill="#e2e8f0">实证：净化前后对照</text>
+
+    <!-- 像素酱头像 -->
+    <g transform="translate(52,110)">
+      <rect x="-19" y="14" width="38" height="22" rx="9" fill="#DD0031"/>
+      <circle cx="0" cy="-2" r="16" fill="#ffd9b3"/>
+      <path d="M-16,-2 a16,16 0 0 1 32,0 q-3,-13 -16,-13 q-13,0 -16,13 z" fill="#22d3ee"/>
+      <circle cx="15" cy="4" r="6.5" fill="#22d3ee"/>
+      <circle cx="-5" cy="0" r="1.7" fill="#0b1220"/>
+      <circle cx="5" cy="0" r="1.7" fill="#0b1220"/>
+      <path d="M-3,5 q3,3 6,0" stroke="#0b1220" stroke-width="1.3" fill="none"/>
+    </g>
+    <polygon points="88,100 74,106 88,112" fill="#f8fafc"/>
+    <rect x="88" y="82" width="430" height="52" rx="10" fill="#f8fafc"/>
+    <text x="102" y="104" font-size="15" fill="#0b1220">同一段输入，两条路径：</text>
+    <text x="102" y="126" font-size="15" fill="#0b1220">净化保留内容，bypass 保留风险。</text>
+
+    <!-- Compare -->
+    <rect x="32" y="150" width="240" height="178" rx="8" fill="#111a30" stroke="#34d399" stroke-opacity="0.6"/>
+    <text x="152" y="168" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#34d399">sanitize(HTML)</text>
+    <line x1="44" y1="178" x2="260" y2="178" stroke="#34d399" stroke-opacity="0.2"/>
+    <text x="46" y="198" font-size="12" fill="#94a3b8">&lt;b&gt; 加粗</text>
+    <text x="46" y="216" font-size="11" fill="#34d399">✅ 保留</text>
+    <text x="46" y="240" font-size="12" fill="#94a3b8">onerror 事件</text>
+    <text x="46" y="258" font-size="11" fill="#34d399">✅ 移除</text>
+    <text x="46" y="282" font-size="12" fill="#94a3b8">&lt;script&gt;</text>
+    <text x="46" y="300" font-size="11" fill="#34d399">✅ 移除</text>
+
+    <rect x="300" y="150" width="240" height="178" rx="8" fill="#111a30" stroke="#DD0031" stroke-opacity="0.6"/>
+    <text x="420" y="168" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#DD0031">bypassTrustHtml</text>
+    <line x1="312" y1="178" x2="528" y2="178" stroke="#DD0031" stroke-opacity="0.2"/>
+    <text x="314" y="198" font-size="12" fill="#94a3b8">&lt;b&gt; 加粗</text>
+    <text x="314" y="216" font-size="11" fill="#fbbf24">⚠ 原样保留</text>
+    <text x="314" y="240" font-size="12" fill="#94a3b8">onerror 事件</text>
+    <text x="314" y="258" font-size="11" fill="#DD0031">❌ 原样执行</text>
+    <text x="314" y="282" font-size="12" fill="#94a3b8">&lt;script&gt;</text>
+    <text x="314" y="300" font-size="11" fill="#DD0031">❌ 原样插入</text>
+  </g>
+
+  <!-- Panel 4: 右下 · 结案 -->
+  <g transform="translate(608,462)">
+    <rect width="572" height="361" rx="14" fill="#0e1730" stroke="#223055"/>
+    <polygon points="420,0 480,0 150,361 90,361" fill="#f97316" opacity="0.04"/>
+    <rect x="14" y="13" width="26" height="20" rx="6" fill="#f97316"/>
+    <text x="27" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b1220">4</text>
+    <text x="50" y="29" font-size="17" font-weight="bold" fill="#e2e8f0">结案：三条底线</text>
+
+    <!-- 码叔头像 -->
+    <g transform="translate(52,110)">
+      <rect x="-19" y="14" width="38" height="22" rx="9" fill="#e2e8f0"/>
+      <circle cx="0" cy="-2" r="16" fill="#ffd9b3"/>
+      <path d="M-16,-2 a16,16 0 0 1 32,0 q-3,-12 -16,-12 q-13,0 -16,12 z" fill="#f1f5f9"/>
+      <circle cx="-5" cy="0" r="4" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+      <circle cx="5" cy="0" r="4" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+      <path d="M-1,0 L1,0" stroke="#94a3b8" stroke-width="1.4"/>
+      <circle cx="-5" cy="0" r="1.4" fill="#0b1220"/>
+      <circle cx="5" cy="0" r="1.4" fill="#0b1220"/>
+      <path d="M-6,7 q12,9 0,16 q-4,0 -6,-16 z" fill="#f1f5f9"/>
+    </g>
+    <polygon points="88,100 74,106 88,112" fill="#f8fafc"/>
+    <rect x="88" y="82" width="430" height="52" rx="10" fill="#f8fafc"/>
+    <text x="102" y="104" font-size="15" fill="#0b1220">文本用插值、HTML 用净化、</text>
+    <text x="102" y="126" font-size="15" fill="#0b1220">bypass 只给可信来源。</text>
+
+    <!-- 坑点标签 -->
+    <rect x="24" y="154" width="96" height="26" rx="13" fill="#f97316"/>
+    <text x="72" y="172" text-anchor="middle" font-size="13" font-weight="bold" fill="#0b1220">⚠ 坑点</text>
+    <rect x="32" y="200" width="9" height="9" rx="2" fill="#f97316"/>
+    <text x="52" y="209" font-size="14" fill="#e2e8f0">对用户评论用 bypass → 等同关闭 XSS 防护</text>
+    <rect x="32" y="228" width="9" height="9" rx="2" fill="#f97316"/>
+    <text x="52" y="237" font-size="14" fill="#e2e8f0">URL 用 HTML context → javascript: 仍可点击</text>
+    <rect x="32" y="256" width="9" height="9" rx="2" fill="#f97316"/>
+    <text x="52" y="265" font-size="14" fill="#e2e8f0">CSP 一次收太死 → 生产白屏，先 Report-Only</text>
+
+    <!-- 码叔总结 -->
+    <rect x="24" y="290" width="524" height="50" rx="8" fill="#111a30" stroke="#1e2a44"/>
+    <rect x="24" y="290" width="4" height="50" rx="2" fill="#DD0031"/>
+    <text x="40" y="311" font-size="13.5" font-weight="bold" fill="#DD0031">码叔总结</text>
+    <text x="40" y="331" font-size="13.5" fill="#e2e8f0">净化挡内容，CSP 挡执行，Trusted Types 挡字符串。</text>
+  </g>
+
+  <text x="1180" y="832" text-anchor="end" font-size="11" fill="#475569">NEON INK · angular-tutorial · EP.15</text>
+</svg>
